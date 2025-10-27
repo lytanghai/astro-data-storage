@@ -1,6 +1,6 @@
 spring:
 #  profiles:
-#    active: local
+#    active: locall
   application:
     name: astro-data-storage
 
