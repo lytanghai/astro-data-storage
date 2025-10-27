@@ -6,7 +6,7 @@ spring:
 
 datasource:
   url: ${HOST}
-  usernam: ${USER}
+  username: ${USER}
   password: ${PASSWORD}
   driver-class-name: org.postgresql.Driver
   hikari:
