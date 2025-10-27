@@ -1,0 +1,27 @@
+spring:
+#  profiles:
+#    active: local
+  application:
+    name: astro-data-storage
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_HOST}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      initialization-fail-timeout: -1
+      connection-timeout: 30000
+      validation-timeout: 5000
+      maximum-pool-size: 10
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: ${JPA_VIEW_MODE}
+
+server:
+  servlet:
+    context-path: /astro-data
+  port: 8080

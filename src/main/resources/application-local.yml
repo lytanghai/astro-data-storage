@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: astro-data-storage
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+  datasource:
+#      Home
+#      url: jdbc:postgresql://localhost:5432/postgres
+#      username: postgres
+#      password: admin
+
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: 309927605
+      driver-class-name: org.postgresql.Driver
+#      hikari:
+#        initialization-fail-timeout: -1
+#        connection-timeout: 30000
+#        validation-timeout: 5000
+#        maximum-pool-size: 10
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+server:
+
+  servlet:
+    context-path: /astro-data
+    port: 8081
+
+app:
+  version: 1.0.10
