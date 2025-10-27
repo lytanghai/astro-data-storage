@@ -1,14 +1,12 @@
 spring:
 #  profiles:
-#    active: locall
+#    active: local
   application:
     name: astro-data-storage
 
   datasource:
+    url: ${HOST}?user=${USER}&password=${PASSWORD}
     driver-class-name: org.postgresql.Driver
-    url: ${DB_HOST}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
     hikari:
       initialization-fail-timeout: -1
       connection-timeout: 30000
